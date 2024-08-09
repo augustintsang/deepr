@@ -9,7 +9,3 @@ This project aims to replace the current Elasticsearch-based fuzzy matching syst
 - `src/`: Source code for the project.
 - `requirements.txt`: Python dependencies.
 - `config.py`: Configuration settings.
-
-## Setup
-1. Clone the repository.
-2. Install dependencies:
