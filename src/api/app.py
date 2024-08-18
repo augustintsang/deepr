@@ -1,5 +1,5 @@
 # src/api.py
-from api import Flask, request, jsonify
+from api.app import Flask, request, jsonify
 from query_processing import encode_query, search_similar
 import pandas as pd
 
