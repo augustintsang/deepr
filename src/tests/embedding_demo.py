@@ -27,11 +27,17 @@ def fill_in_missing_artist(incomplete_data, possible_artists):
     # Find the best match
     best_artist = possible_artists[np.argmax(similarities_cpu)]
     return f"{incomplete_data} {best_artist}"
+
 def find_best_match(search_query, song_options):
     song_embeddings = model.encode(song_options, convert_to_tensor=True)
     query_embedding = model.encode(search_query, convert_to_tensor=True)
+
+    # Calculate similarities and move to CPU
     similarities = util.pytorch_cos_sim(query_embedding, song_embeddings)
-    best_match = song_options[np.argmax(similarities)]
+    similarities_cpu = similarities.cpu().numpy()
+
+    # Find the best match
+    best_match = song_options[np.argmax(similarities_cpu)]
     return best_match
 
 def rank_songs_by_metadata(song_options, metadata):
