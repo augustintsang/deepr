@@ -1,7 +1,7 @@
 # tests/test_model_training.py
 import unittest
 import pandas as pd
-from src.model_training import train_and_encode
+from model_training.generate_embeddings import train_and_encode
 from config import config
 
 class TestModelTraining(unittest.TestCase):
