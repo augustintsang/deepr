@@ -23,3 +23,6 @@ def train_and_encode(data):
 if __name__ == "__main__":
     data = load_data_from_mock_db()
     train_and_encode(data)
+    
+
+    

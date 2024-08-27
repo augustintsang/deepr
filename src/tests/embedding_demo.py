@@ -65,7 +65,7 @@ def standardize_data(data_sources, standard_entry):
     return corrected_data
 
 def main():
-    # Problem 1: Standardize Artist Names
+    # Problem 0: Standardize Artist Names 
     artist_names = ["Ed Sheeran", "E. Sheeran", "Edward Sheeran"]
     standardized_name = standardize_artist_names(artist_names)
     print("Standardized Artist Name:", standardized_name)
